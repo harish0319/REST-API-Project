@@ -7,27 +7,26 @@
     <!--<link rel="stylesheet" href="styles.css"> -->
 </head>
 <body>
-    <div class="container">
-        <h1>Student Manager</h1>
-        <a href="#student-list" class="all-students-link">All Students (<span id="student-count">0</span>)</a>
-        <div class="student-list">
-            
-            <div class="student-details">
-                <div class="details">
-                    <input type="text" id="name" placeholder="Name">
-                    <input type="tel" id="mobile" placeholder="Mobile No" pattern="[0-9]{10}">
-                    <input type="text" id="address" placeholder="Address">
-                    <button onclick="addStudent()">Add</button>
-                </div>
-            </div>
-            <div class="student-numbers">
-                <h2>All Students</h2>
-                <ul id="student-list">
-                    <!-- Student list will be populated here -->
-                </ul>
-            </div>
-        </div>
-    </div>
+    <h1>Student Manager</h1>
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+        </div><br>
+        <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+        </div><br>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" required>
+        </div><br>
+        <button type="submit">Add / Update Student</button>
+    </form>
+
+    <h2>All Students</h2>
+    <ul id="student-list"></ul>
+    <p>Total Students: <span id="student-count">0</span></p>
 
     <script src="script.js"></script>
 </body>
